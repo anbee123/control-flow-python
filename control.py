@@ -129,3 +129,20 @@ while term < 51:
 
 month = input("enter the month of the season(Jan-Dec):")
 day = int(input ("Enter the day of the month: "))
+if month in ("Jan", "Feb", "Mar"):
+    season = "Winter"
+elif month in ("Apr", "May", "Jun"):
+    season = "Spring"
+elif month in ("Jul", "Aug", "Sept"):
+    season = "Summer"
+else:
+    season = "Fall"
+if month == "Mar" and day > 19:
+    season = "Spring"
+elif month == 'Jun' and day > 20:
+    season = 'Summer'
+elif month == "Sep" and day > 21:
+    season = "Summer"
+elif month == "Dec" and day > 20:
+    season = "Winter"
+    print(f'{month}{day} is in {season}')
